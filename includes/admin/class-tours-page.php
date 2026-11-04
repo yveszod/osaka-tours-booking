@@ -9,12 +9,12 @@ class Osaka_Tours_Page
     public static function register_menu(): void
     {
         add_menu_page(
-            'Kansai Tours',
-            'Kansai Tours',
+            'Osaka Tours',
+            'Osaka Tours',
             'manage_options',
-            'kansai-tours',
+            'osaka-tours',
             [self::class, 'render'],
-            'dashicons-info',
+            'dashicons-palmtree',
             26
         );
     }
@@ -44,7 +44,7 @@ class Osaka_Tours_Page
 
         <div class="wrap osaka-tours-admin">
 
-            <h1>Kansai Tours</h1>
+            <h1>Osaka Tours</h1>
 
             <p class="description">
                 Manage and monitor your available tours.
