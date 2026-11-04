@@ -1,0 +1,29 @@
+.osaka-tours-admin {
+    margin-top: 24px;
+}
+
+.osaka-tours-admin h1 {
+    margin-bottom: 8px;
+}
+
+.osaka-tours-admin .description {
+    margin-bottom: 24px;
+}
+
+.osaka-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.osaka-status.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.osaka-status.inactive {
+    background: #f3f4f6;
+    color: #4b5563;
+}
