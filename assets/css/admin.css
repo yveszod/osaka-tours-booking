@@ -23,6 +23,10 @@
     margin-top: 0;
 }
 
+.kansai-dashboard-card + .kansai-dashboard-card {
+    margin-top: 16px;
+}
+
 .kansai-status {
     display: inline-block;
     padding: 4px 10px;
@@ -39,4 +43,24 @@
 .kansai-status.inactive {
     background: #f3f4f6;
     color: #4b5563;
+}
+
+.booking_tag {
+    background-color: #777;
+    color: #fff !important;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 3px !important;
+}
+
+.booking_tag.booking_pending {
+    background-color: #ffcc00;
+}
+
+.booking_tag.booking_confirmed {
+    background-color: #4ade80;
+}
+
+.booking_tag.booking_cancelled {
+    background-color: #f87171;
 }

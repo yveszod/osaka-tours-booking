@@ -23,6 +23,14 @@ class Kansai_Tours_Dashboard_Page
                     Manage Tours
                 </a>
             </div>
+
+            <div class="kansai-dashboard-card">
+                <h2>Bookings</h2>
+                <p>Review guest contact details, tour dates, special requests, and booking and payment statuses.</p>
+                <a class="button button-primary" href="<?php echo esc_url(admin_url('admin.php?page=kansai-tours-bookings')); ?>">
+                    View Bookings
+                </a>
+            </div>
         </div>
         <?php
     }

@@ -26,6 +26,15 @@ class Kansai_Tours_Page
             'kansai-tours-tours',
             [self::class, 'render']
         );
+
+        add_submenu_page(
+            'kansai-tours',
+            'Bookings',
+            'Bookings',
+            'manage_options',
+            'kansai-tours-bookings',
+            [Kansai_Tours_Bookings_Page::class, 'render']
+        );
     }
 
     public static function render(): void
