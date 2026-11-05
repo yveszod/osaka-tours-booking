@@ -4,18 +4,27 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class Osaka_Tours_Page
+class Kansai_Tours_Page
 {
     public static function register_menu(): void
     {
         add_menu_page(
-            'Osaka Tours',
-            'Osaka Tours',
+            'Kansai Tours',
+            'Kansai Tours',
             'manage_options',
-            'osaka-tours',
-            [self::class, 'render'],
+            'kansai-tours',
+            [Kansai_Tours_Dashboard_Page::class, 'render'],
             'dashicons-palmtree',
             26
+        );
+
+        add_submenu_page(
+            'kansai-tours',
+            'Tours',
+            'Tours',
+            'manage_options',
+            'kansai-tours-tours',
+            [self::class, 'render']
         );
     }
 
@@ -42,9 +51,9 @@ class Osaka_Tours_Page
 
         ?>
 
-        <div class="wrap osaka-tours-admin">
+        <div class="wrap kansai-tours-admin">
 
-            <h1>Osaka Tours</h1>
+            <h1>Tours</h1>
 
             <p class="description">
                 Manage and monitor your available tours.
@@ -118,11 +127,11 @@ class Osaka_Tours_Page
 
                                 <td>
                                     <?php if ($tour->active): ?>
-                                        <span class="osaka-status active">
+                                        <span class="kansai-status active">
                                             Active
                                         </span>
                                     <?php else: ?>
-                                        <span class="osaka-status inactive">
+                                        <span class="kansai-status inactive">
                                             Inactive
                                         </span>
                                     <?php endif; ?>
