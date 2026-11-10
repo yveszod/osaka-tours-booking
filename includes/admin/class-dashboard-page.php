@@ -31,6 +31,14 @@ class Kansai_Tours_Dashboard_Page
                     View Bookings
                 </a>
             </div>
+
+            <div class="kansai-dashboard-card">
+                <h2>Tour Slots</h2>
+                <p>View scheduled tour dates, capacities, confirmed guests, and remaining availability.</p>
+                <a class="button button-primary" href="<?php echo esc_url(admin_url('admin.php?page=kansai-tours-slots')); ?>">
+                    View Tour Slots
+                </a>
+            </div>
         </div>
         <?php
     }

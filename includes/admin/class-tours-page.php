@@ -35,6 +35,15 @@ class Kansai_Tours_Page
             'kansai-tours-bookings',
             [Kansai_Tours_Bookings_Page::class, 'render']
         );
+
+        add_submenu_page(
+            'kansai-tours',
+            'Tour Slots',
+            'Tour Slots',
+            'manage_options',
+            'kansai-tours-slots',
+            [Kansai_Tours_Slots_Page::class, 'render']
+        );
     }
 
     public static function render(): void
