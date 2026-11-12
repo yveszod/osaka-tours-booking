@@ -44,6 +44,16 @@ class Kansai_Tours_Page
             'kansai-tours-slots',
             [Kansai_Tours_Slots_Page::class, 'render']
         );
+
+        // Hidden page opened from an individual tour's Edit link.
+        add_submenu_page(
+            null,
+            'Edit Tour',
+            'Edit Tour',
+            'manage_options',
+            'kansai-tours-edit-tour',
+            ['Kansai_Tours_Edit_Tour_Page', 'render']
+        );
     }
 
     public static function render(): void
@@ -101,6 +111,7 @@ class Kansai_Tours_Page
                             <th>Duration</th>
                             <th>Price</th>
                             <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
 
@@ -153,6 +164,12 @@ class Kansai_Tours_Page
                                             Inactive
                                         </span>
                                     <?php endif; ?>
+                                </td>
+                                <td>
+                                    <a class="button button-small" href="<?php echo esc_url(add_query_arg([
+                                        'page' => 'kansai-tours-edit-tour',
+                                        'tour_id' => $tour->id,
+                                    ], admin_url('admin.php'))); ?>">Edit</a>
                                 </td>
                             </tr>
 

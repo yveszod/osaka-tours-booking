@@ -17,6 +17,7 @@ require_once KANSAI_TOURS_PATH . 'includes/admin/class-dashboard-page.php';
 require_once KANSAI_TOURS_PATH . 'includes/admin/class-tours-page.php';
 require_once KANSAI_TOURS_PATH . 'includes/admin/class-bookings-page.php';
 require_once KANSAI_TOURS_PATH . 'includes/admin/class-slots-page.php';
+require_once KANSAI_TOURS_PATH . 'includes/admin/class-edit-tour-page.php';
 
 add_action('admin_menu', function () {
     Kansai_Tours_Page::register_menu();
@@ -27,7 +28,8 @@ add_action('admin_enqueue_scripts', function ($hook) {
         'toplevel_page_kansai-tours',
         'kansai-tours_page_kansai-tours-tours',
         'kansai-tours_page_kansai-tours-bookings',
-        'kansai-tours_page_kansai-tours-slots'
+        'kansai-tours_page_kansai-tours-slots',
+        'admin_page_kansai-tours-edit-tour'
     ], true)) {
         return;
     }
